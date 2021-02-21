@@ -1,20 +1,13 @@
 # book-shop
 Task "Book Shop". Course "RSSchool Angular 2021 Q1"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
+The app will automatically start with eslint check and open in browser if you run `npm start`
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Branch "task-intro" (PR#1):
+  - ##### По заданию ["task-intro"](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular-new/angular-intro.md)
+    Создание проекта:
+    - [x] с использованием angular-cli создайте новый проект (ng new bookShop) и загрузите его на гитхаб в репозиторий с названием book-shop.
+    - [x] в package.json заменить содержимое команды start на ng lint && ng serve -o.
+  - ##### Дополнительно к заданию:
+    - [x] tslint заменен на eslint (Airbnb), установлен и настроен prettier
+ 
