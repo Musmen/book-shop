@@ -1,0 +1,66 @@
+@import 'src/scss/mixins.scss';
+@import 'src/scss/variables.scss';
+
+.book-card {
+  width: 200px;
+  margin: 10px;
+  padding: 0;
+  padding-bottom: 10px;
+
+  color: $color-text-light-secondary;
+  background-color: $color-light-main;
+}
+
+.book-card__header {
+  justify-content: center;
+  align-items: center;
+
+  color: $color-light-main;
+
+  background-color: $color-main;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.book-card__title {
+  @include flex-centered;
+  height: 70px;
+  
+  text-align: center;
+  
+  overflow: hidden;
+}
+
+.book-card__content {
+  padding: 10px;
+}
+
+.book-card__content__description {
+  height: 85px;
+  
+  text-align: justify;
+  
+  overflow: hidden;
+}
+
+.book-card__content__category,
+.book-card__price {
+  color: $color-attention-main;
+  text-align: right;
+}
+
+.book-card__buttons {
+  @include flex-centered;
+}
+
+.book-card__button {
+  min-width: 100px;
+  margin-bottom: 10px;
+
+  color: $color-text-light-main;
+  background-color: $color-light-secondary;
+}
+
+.mat-card>.mat-card-actions:last-child {
+  margin: 0;
+}

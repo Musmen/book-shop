@@ -1,0 +1,18 @@
+body { 
+  margin: 0; 
+
+  font-family: $font-main;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.centralizer {
+  height: 100%; 
+
+  background-color: $color-bg-light-main;
+}
