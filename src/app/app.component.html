@@ -15,7 +15,11 @@
     <div>
       <ul class="book__list list">
         <li class="book__list__item" *ngFor="let bookItem of booksList">
-          <app-book [bookItem]="bookItem"></app-book>
+          <app-book 
+            [bookItem]="bookItem"
+            (addBookToCartEvent)="onAddBookToCart($event)" 
+          >
+          </app-book>
         </li>
       </ul>
     </div>
@@ -29,11 +33,7 @@
       </span>
     </ng-template>
     <div>
-      <ul class="book__list list">
-        <li class="book__list__item" *ngFor="let bookItem of booksList.reverse()">
-          <app-book [bookItem]="bookItem"></app-book>
-        </li>
-      </ul>
+      <app-cart [cartList]="cartList"></app-cart>
     </div>
   </mat-tab>
 </mat-tab-group>

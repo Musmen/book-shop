@@ -27,6 +27,7 @@
     <button 
       class="card__button book-card__button card__button_buy book-card__button_buy"
       [disabled]="!bookItem.isAvailable"
+      (click)="addBookToCart(bookItem)"
       mat-button
     >Buy</button>
   </mat-card-actions>

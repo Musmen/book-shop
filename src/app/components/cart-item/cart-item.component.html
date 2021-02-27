@@ -1,0 +1,37 @@
+<mat-card class="card cart-item-card" >
+  <mat-card-header class="card__header cart-item-card__header">
+    <mat-card-title class="card__title cart-item-card__title">
+      {{ cartItem.name }}
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="card__content cart-item-card__content">
+    <p class="card__content__description cart-item-card__content__description">
+      {{ cartItem.description }}
+    </p>
+    <hr>
+    <p class="card__content__category cart-item-card__content__category">
+      {{ cartItem.category | titlecase }}
+    </p>
+    <p class="card__date cart-item-card__date">
+      <span class="card__date__label cart-item-card__date__label">Create date: </span>
+      <span class="card__date__content cart-item-card__date__content">{{ cartItem.createDate | date }}</span>
+    </p>
+    <p class="card__price cart-item-card__price">
+      <span class="card__price__label cart-item-card__price__label">Price: </span>
+      <span class="card__price__content cart-item-card__price__content">{{ cartItem.price | currency }}</span>
+    </p>
+    <p>
+      <span class="card__count__label cart-item-card__count__label">Count: </span>
+      <span class="card__count__content cart-item-card__count__content">{{ cartItem.count }}</span>
+    </p>
+  </mat-card-content>
+  
+  <mat-card-actions class="card__buttons cart-item-card__buttons">
+    <button 
+      class="card__button cart-item-card__button card__button_buy cart-item-card__button_buy"
+      [disabled]="!cartItem.isAvailable"
+      mat-button
+    >Buy</button>
+  </mat-card-actions>
+</mat-card>
