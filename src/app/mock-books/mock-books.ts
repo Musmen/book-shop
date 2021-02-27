@@ -17,7 +17,7 @@ export const mockBooksList: BookModel[] = [
     price: 15,
     category: BookCategories.comix,
     createDate: 1613910000000,
-    isAvailable: true,
+    isAvailable: false,
   },
   {
     name: 'Gone With the Wind',
@@ -31,8 +31,22 @@ export const mockBooksList: BookModel[] = [
     name: 'My New Book',
     description: `It is my new book, not ready yet...`,
     price: 1000,
-    category: BookCategories['science fiction'],
+    category: BookCategories.science,
     createDate: Date.now(),
     isAvailable: false,
+  },
+  {
+    name: 'The Lord of the Rings',
+    description: `The Lord of the Rings is an epic high fantasy novel 
+      by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, 
+      the world at some distant time in the past, the story began as a sequel 
+      to Tolkien's 1937 children's book The Hobbit, but eventually developed 
+      into a much larger work. Written in stages between 1937 and 1949, 
+      The Lord of the Rings is one of the best-selling books ever written, 
+      with over 150 million copies sold`,
+    price: 745.45,
+    category: BookCategories.fantasy,
+    createDate: 1610200000000,
+    isAvailable: true,
   },
 ];

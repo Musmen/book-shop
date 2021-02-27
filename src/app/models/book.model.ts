@@ -1,9 +1,9 @@
 export enum BookCategories {
-  'detective',
-  'science fiction',
-  'fantasy',
-  'novel',
-  'comix',
+  detective = 'detective',
+  science = 'science fiction',
+  fantasy = 'fantasy',
+  novel = 'novel',
+  comix = 'comix',
 }
 
 export interface BookModel {

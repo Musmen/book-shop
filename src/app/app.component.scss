@@ -7,7 +7,6 @@
 }
 
 .mat-tab-label {
-  color: $color-text-light-main;
   text-transform: uppercase;
 
   opacity: 1;
@@ -15,4 +14,8 @@
 
 .mat-tab-label__icon {
   margin-right: 5px;
+}
+
+.mat-tab-group {
+  background-color: $color-bg-light-main;
 }

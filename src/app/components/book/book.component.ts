@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { BookModel, BookCategories } from 'src/app/models/book.model';
+import { BookModel } from 'src/app/models/book.model';
 
 @Component({
   selector: 'app-book',
@@ -9,8 +9,4 @@ import { BookModel, BookCategories } from 'src/app/models/book.model';
 })
 export class BookComponent {
   @Input() bookItem: BookModel;
-
-  get bookCategory(): string {
-    return BookCategories[this.bookItem.category];
-  }
 }
