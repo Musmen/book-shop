@@ -13,7 +13,7 @@ export class BookComponent {
 
   @Output() addBookToCartEvent: EventEmitter<BookModel> = new EventEmitter<BookModel>();
 
-  public addBookToCart(bookItem: BookModel): void {
+  addBookToCart(bookItem: BookModel): void {
     this.addBookToCartEvent.emit(bookItem);
   }
 }

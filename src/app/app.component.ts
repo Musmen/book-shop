@@ -41,7 +41,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     return mockBooksList;
   }
 
-  public onAddBookToCart(bookItem: BookModel): void {
+  onAddBookToCart(bookItem: BookModel): void {
     const purshachedCartItemIndex = this.cartList.findIndex(
       (cartItem) => cartItem.name === bookItem.name,
     );
@@ -55,5 +55,15 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     this.cartList = [...this.cartList];
+  }
+
+  onDeleteBookFromCart($event: string): void {
+    this.cartList = this.cartList.filter((cartItem: CartItemModel, index: number) => {
+      if (cartItem.name === $event) {
+        this.cartList[index].count = 0;
+        return false;
+      }
+      return true;
+    });
   }
 }
