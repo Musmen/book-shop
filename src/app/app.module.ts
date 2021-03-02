@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './components/book/book.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { BooksService } from './services/books.service';
 
 @NgModule({
   declarations: [AppComponent, BookComponent, CartComponent, CartItemComponent],
@@ -28,7 +29,7 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     MatIconModule,
     MatBadgeModule,
   ],
-  providers: [],
+  providers: [BooksService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

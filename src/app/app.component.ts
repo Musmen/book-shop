@@ -9,9 +9,9 @@ import {
 } from '@angular/core';
 
 import { APP_TITLE } from 'src/app/common/constants';
-import { mockBooksList } from 'src/app/mock-books/mock-books';
 import { BookModel } from 'src/app/models/book.model';
 import { CartItemModel } from 'src/app/models/cartItem.model';
+import { BooksService } from './services/books.service';
 
 @Component({
   selector: 'app-root',
@@ -26,10 +26,10 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   cartList: CartItemModel[];
 
-  constructor(private _renderer: Renderer2) {}
+  constructor(private _renderer: Renderer2, private bookService: BooksService) {}
 
   ngOnInit(): void {
-    this.booksList = this._getMockBooksList();
+    this.booksList = this.bookService.getBooks();
     this.cartList = [];
   }
 
@@ -61,9 +61,5 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
       return true;
     });
-  }
-
-  private _getMockBooksList(): BookModel[] {
-    return mockBooksList;
   }
 }
