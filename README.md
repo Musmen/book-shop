@@ -31,3 +31,6 @@ The app will automatically start with eslint check and open in browser if you ru
     9. Добавить в разметку AppComponent элемент <h1 #appTitle></h1> с шаблонной переменной. Использовать `@ViewChild`, получить доступ к DOM-элементу темплейта, установить заголовок для приложения из класса.
   - ##### Рекомендации:
     Не используйте для имен событий, которые генерят компоненты, префикс `on`. Используйте его для нейминга обработчиков этих событий
+
+### Branch "task-services" (PR#3):
+  - ##### По заданию ["task-services"](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular-new/angular-services-di.md)
