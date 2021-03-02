@@ -1,0 +1,34 @@
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="mat-tab-label">
+        <mat-icon class="mat-tab-label__icon">auto_stories</mat-icon>
+        Book shop
+      </span>
+    </ng-template>
+    <div>
+      <ul class="book__list list">
+        <li class="book__list__item" *ngFor="let bookItem of booksList">
+          <app-book 
+            [bookItem]="bookItem"
+            (addBookToCartEvent)="onAddBookToCart($event)" 
+          >
+          </app-book>
+        </li>
+      </ul>
+    </div>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="mat-tab-label">
+        <mat-icon class="mat-tab-label__icon" [matBadge]="cartTotalQuantity || ''" matBadgeColor="#ff4081">shopping_cart</mat-icon>
+        Cart
+      </span>
+    </ng-template>
+    
+    <div>
+      <app-cart-list></app-cart-list>
+    </div>
+  </mat-tab>
+</mat-tab-group>

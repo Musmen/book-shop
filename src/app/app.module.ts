@@ -12,12 +12,20 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookComponent } from './components/book/book.component';
-import { CartComponent } from './components/cart/cart.component';
+import { BookShopComponent } from './components/book-shop/book-shop.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
-import { BooksService } from './services/books.service';
+import { BooksService } from './services/books/books.service';
+import { CartService } from './services/cart/cart.service';
+import { CartListComponent } from './components/cart-list/cart-list/cart-list.component';
 
 @NgModule({
-  declarations: [AppComponent, BookComponent, CartComponent, CartItemComponent],
+  declarations: [
+    AppComponent,
+    BookComponent,
+    BookShopComponent,
+    CartItemComponent,
+    CartListComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +37,7 @@ import { BooksService } from './services/books.service';
     MatIconModule,
     MatBadgeModule,
   ],
-  providers: [BooksService],
+  providers: [BooksService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
