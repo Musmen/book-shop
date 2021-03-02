@@ -34,11 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this._renderer.setProperty(this.appTitle.nativeElement, 'textContent', APP_TITLE);
-  }
-
-  private _getMockBooksList(): BookModel[] {
-    return mockBooksList;
+    this._renderer.setProperty(this.appTitle.nativeElement, 'innerText', APP_TITLE);
   }
 
   onAddBookToCart(bookItem: BookModel): void {
@@ -65,5 +61,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
       return true;
     });
+  }
+
+  private _getMockBooksList(): BookModel[] {
+    return mockBooksList;
   }
 }

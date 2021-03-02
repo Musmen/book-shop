@@ -33,8 +33,9 @@
         <mat-icon>chevron_left</mat-icon>
       </button>
       <input 
-        class="input cart-input-item-count" 
-        [ngModel]="cartItem.count" 
+        class="input cart-input-item-count"
+        [ngModel]="cartItem.count"
+        (mousewheel)="onWheelCartItemCount($event)"
         readonly
       >
       <button 
@@ -52,7 +53,7 @@
       mat-mini-fab
       (click)="deleteCartItem()"
     >
-      <mat-icon>garbage</mat-icon>
+      <mat-icon>delete_forever</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>

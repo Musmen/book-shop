@@ -28,6 +28,16 @@ export class CartItemComponent {
     this.deleteCartItemEvent.emit(this.cartItem.name);
   }
 
+  onWheelCartItemCount($event: WheelEvent): void {
+    if ($event.deltaY < 0) {
+      this.increaseCartItemCount();
+    } else {
+      this.decreaseCartItemCount();
+    }
+
+    $event.preventDefault();
+  }
+
   private _verifyCartItemCount(): void {
     if (this.cartItem.count < CART_ITEM_COUNT.MIN) {
       this.cartItem.count = CART_ITEM_COUNT.MIN;
