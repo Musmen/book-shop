@@ -7,15 +7,7 @@
       </span>
     </ng-template>
     <div>
-      <ul class="book__list list">
-        <li class="book__list__item" *ngFor="let bookItem of booksList">
-          <app-book 
-            [bookItem]="bookItem"
-            (addBookToCartEvent)="onAddBookToCart($event)" 
-          >
-          </app-book>
-        </li>
-      </ul>
+      <app-book-list></app-book-list>
     </div>
   </mat-tab>
 

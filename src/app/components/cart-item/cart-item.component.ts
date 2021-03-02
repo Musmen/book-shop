@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { CartItemModel } from 'src/app/models/cartItem.model';
+import { CartItemModel } from 'src/app/models/cart-item.model';
 import { CartService } from 'src/app/services/cart/cart.service';
 
 @Component({

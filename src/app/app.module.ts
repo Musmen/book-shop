@@ -11,20 +11,22 @@ import { MatBadgeModule } from '@angular/material/badge';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BookComponent } from './components/book/book.component';
-import { BookShopComponent } from './components/book-shop/book-shop.component';
+import { BookItemComponent } from './components/book-item/book-item.component';
+import { BookListComponent } from './components/book-list/book-list.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { CartListComponent } from './components/cart-list/cart-list.component';
+import { BookShopComponent } from './components/book-shop/book-shop.component';
 import { BooksService } from './services/books/books.service';
 import { CartService } from './services/cart/cart.service';
-import { CartListComponent } from './components/cart-list/cart-list/cart-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
+    BookItemComponent,
     BookShopComponent,
     CartItemComponent,
     CartListComponent,
+    BookListComponent,
   ],
   imports: [
     BrowserModule,

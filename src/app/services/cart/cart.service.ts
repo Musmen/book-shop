@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { CART_ITEM_COUNT } from 'src/app/common/constants';
 
-import { BookModel } from 'src/app/models/book.model';
-import { CartItemModel } from 'src/app/models/cartItem.model';
+import { BookItemModel } from 'src/app/models/book-item.model';
+import { CartItemModel } from 'src/app/models/cart-item.model';
 
 @Injectable()
 export class CartService {
-  cartProduct: CartItemModel[];
+  cartProduct: CartItemModel[] = [];
 
   totalQuantity: number;
 
   totalSum: number;
 
-  addBook(bookItem: BookModel): void {
+  addBook(bookItem: BookItemModel): void {
     const purshachedCartItemIndex = this.cartProduct.findIndex(
       (cartItem) => cartItem.name === bookItem.name,
     );

@@ -1,11 +1,6 @@
 @import 'src/scss/mixins.scss';
 @import 'src/scss/variables.scss';
 
-.book__list {
-  @include flex;
-  flex-wrap: wrap;
-}
-
 .mat-tab-label {
   text-transform: uppercase;
 

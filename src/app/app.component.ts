@@ -1,11 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
 import { APP_TITLE } from 'src/app/common/constants';
 
@@ -13,7 +6,6 @@ import { APP_TITLE } from 'src/app/common/constants';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('appTitle') appTitle: ElementRef;

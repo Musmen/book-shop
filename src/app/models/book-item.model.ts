@@ -1,4 +1,4 @@
-export enum BookCategories {
+export enum BookItemCategories {
   detective = 'detective',
   science = 'science fiction',
   fantasy = 'fantasy',
@@ -6,11 +6,11 @@ export enum BookCategories {
   comix = 'comix',
 }
 
-export interface BookModel {
+export interface BookItemModel {
   name: string;
   description: string;
   price: number;
-  category: BookCategories;
+  category: BookItemCategories;
   createDate: number;
   isAvailable: boolean;
 }
