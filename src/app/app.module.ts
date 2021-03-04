@@ -18,6 +18,7 @@ import { CartListComponent } from './components/cart-list/cart-list.component';
 import { BookShopComponent } from './components/book-shop/book-shop.component';
 import { BooksService } from './services/books/books.service';
 import { CartService } from './services/cart/cart.service';
+import { LocalStorageService } from './services/local-storage/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,11 @@ import { CartService } from './services/cart/cart.service';
     MatIconModule,
     MatBadgeModule,
   ],
-  providers: [BooksService, CartService],
+  providers: [
+    BooksService,
+    CartService,
+    { provide: LocalStorageService, useClass: LocalStorageService },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

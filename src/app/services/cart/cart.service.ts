@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CART_ITEM_COUNT } from 'src/app/common/constants';
+import { CART_ITEM_COUNT, DEFAULT_INIT_BOOK_COUNT } from 'src/app/common/constants';
 
 import { BookItemModel } from 'src/app/models/book-item.model';
 import { CartItemModel } from 'src/app/models/cart-item.model';
@@ -16,7 +16,7 @@ export class CartService {
     return this.cartProduct.length;
   }
 
-  addBook(bookItem: BookItemModel): void {
+  addBook(bookItem: BookItemModel, initCount = DEFAULT_INIT_BOOK_COUNT): void {
     const purshachedCartItemIndex = this.cartProduct.findIndex(
       (cartItem) => cartItem.name === bookItem.name,
     );
@@ -25,7 +25,7 @@ export class CartService {
       this.cartProduct[purshachedCartItemIndex].count += 1;
     } else {
       const purshachedCartItem: CartItemModel = bookItem;
-      purshachedCartItem.count = 1;
+      purshachedCartItem.count = initCount;
       this.cartProduct.push(purshachedCartItem);
     }
 
