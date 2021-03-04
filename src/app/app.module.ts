@@ -19,6 +19,7 @@ import { BookShopComponent } from './components/book-shop/book-shop.component';
 import { BooksService } from './services/books/books.service';
 import { CartService } from './services/cart/cart.service';
 import { LocalStorageService } from './services/local-storage/local-storage.service';
+import { ConfigOptionsService } from './services/config-options/config-options.service';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { LocalStorageService } from './services/local-storage/local-storage.serv
     BooksService,
     CartService,
     { provide: LocalStorageService, useClass: LocalStorageService },
+    ConfigOptionsService,
   ],
   bootstrap: [AppComponent],
 })
