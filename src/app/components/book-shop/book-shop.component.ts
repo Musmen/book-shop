@@ -10,7 +10,7 @@ import { CartService } from 'src/app/services/cart/cart.service';
 export class BookShopComponent {
   constructor(private cartService: CartService) {}
 
-  get cartTotalQuantity(): number {
-    return this.cartService.totalQuantity;
+  get cartTotalProducts(): number {
+    return this.cartService.getTotalProducts();
   }
 }

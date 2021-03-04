@@ -13,5 +13,13 @@ export class CartListComponent {
     return this.cartService.cartProduct;
   }
 
+  get cartTotalSum(): number {
+    return this.cartService.totalSum;
+  }
+
+  get cartTotalQuantity(): number {
+    return this.cartService.totalQuantity;
+  }
+
   constructor(private cartService: CartService) {}
 }

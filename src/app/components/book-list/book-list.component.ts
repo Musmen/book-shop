@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { BookItemModel } from 'src/app/models/book-item.model';
 import { BooksService } from 'src/app/services/books/books.service';
@@ -7,6 +7,7 @@ import { BooksService } from 'src/app/services/books/books.service';
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookListComponent implements OnInit {
   booksList: BookItemModel[];

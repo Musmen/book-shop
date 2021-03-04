@@ -8,9 +8,13 @@ import { CartItemModel } from 'src/app/models/cart-item.model';
 export class CartService {
   cartProduct: CartItemModel[] = [];
 
-  totalQuantity: number;
+  totalQuantity = 0;
 
-  totalSum: number;
+  totalSum = 0;
+
+  getTotalProducts(): number {
+    return this.cartProduct.length;
+  }
 
   addBook(bookItem: BookItemModel): void {
     const purshachedCartItemIndex = this.cartProduct.findIndex(
@@ -26,6 +30,7 @@ export class CartService {
     }
 
     this.cartProduct = [...this.cartProduct];
+    this._updateCartData();
   }
 
   removeBook($event: string): void {
@@ -36,6 +41,7 @@ export class CartService {
       }
       return true;
     });
+    this._updateCartData();
   }
 
   decreaseQuantity(name: string): void {
@@ -43,6 +49,7 @@ export class CartService {
 
     this.cartProduct[currentCartItemIndex].count -= 1;
     this._verifyQuantity(currentCartItemIndex);
+    this._updateCartData();
   }
 
   increaseQuantity(name: string): void {
@@ -50,6 +57,7 @@ export class CartService {
 
     this.cartProduct[currentCartItemIndex].count += 1;
     this._verifyQuantity(currentCartItemIndex);
+    this._updateCartData();
   }
 
   private _getCurrentCartItemIndex(name: string): number {
@@ -64,5 +72,14 @@ export class CartService {
     if (this.cartProduct[currentCartItemIndex].count > CART_ITEM_COUNT.MAX) {
       this.cartProduct[currentCartItemIndex].count = CART_ITEM_COUNT.MAX;
     }
+  }
+
+  private _updateCartData(): void {
+    this.totalSum = 0;
+    this.totalQuantity = 0;
+    this.cartProduct.forEach((carItem: CartItemModel) => {
+      this.totalQuantity += carItem.count;
+      this.totalSum += carItem.count * carItem.price;
+    });
   }
 }

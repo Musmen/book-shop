@@ -44,7 +44,7 @@ The app will automatically start with eslint check and open in browser if you ru
         • `removeBook()` - удалить указанный товар из корзины;  
         • `increaseQuantity()/decreaseQuantity()` - увеличить/уменьшить колличество указанного товара в корзине;
       • `removeAllBooks()` - очистить корзину;  
-        • `updateCartData()` - пересчитать общее количество товароа и сумму после каждой операции, которая влияет на корзину;
+        • `updateCartData()` - пересчитать общее количество товара и сумму после каждой операции, которая влияет на корзину;
     3. Создайте сервис `LocalStorageService` _(core/services/local-storage.service.ts)_, который позволит работать
       с `window.localStorage` (как класс, `useClass`).
       Он должен предоставлять методы для:
