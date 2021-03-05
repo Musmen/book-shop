@@ -21,6 +21,7 @@ import { CartService } from './services/cart/cart.service';
 import { LocalStorageService } from './services/local-storage/local-storage.service';
 import { ConfigOptionsService } from './services/config-options/config-options.service';
 import { ConstantsService } from './services/constants/constants.service';
+import { GeneratorFactory } from './services/generator/generator.service';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ConstantsService } from './services/constants/constants.service';
     { provide: LocalStorageService, useClass: LocalStorageService },
     ConfigOptionsService,
     { provide: ConstantsService, useValue: ConstantsService },
+    { provide: GeneratorFactory, useFactory: GeneratorFactory },
   ],
   bootstrap: [AppComponent],
 })
