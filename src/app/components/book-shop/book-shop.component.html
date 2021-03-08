@@ -14,7 +14,12 @@
   <mat-tab>
     <ng-template mat-tab-label>
       <span class="mat-tab-label">
-        <mat-icon class="mat-tab-label__icon" [matBadge]="cartTotalProducts || ''" matBadgeColor="#ff4081">shopping_cart</mat-icon>
+        <mat-icon 
+          class="mat-tab-label__icon" 
+          [matBadge]="cartTotalProducts || ''" 
+        >
+          shopping_cart
+        </mat-icon>
         Cart
       </span>
     </ng-template>
@@ -24,3 +29,4 @@
     </div>
   </mat-tab>
 </mat-tab-group>
+<app-about></app-about>

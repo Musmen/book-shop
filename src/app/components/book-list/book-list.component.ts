@@ -17,4 +17,8 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {
     this.booksList = this.bookService.getBooks();
   }
+
+  trackFunction(index, item) {
+    return item ? item.name : null;
+  }
 }

@@ -22,4 +22,8 @@ export class CartListComponent {
   }
 
   constructor(private cartService: CartService) {}
+
+  trackFunction(index, item) {
+    return item ? item.name : null;
+  }
 }

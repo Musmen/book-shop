@@ -27,6 +27,10 @@
   background-color: $color-main;
 }
 
+.cart-item-card__button_delete {
+  background-color: $color-attention-main;
+}
+
 .cart-input-item-count {
   width: 50px;
   margin: 5px 10px;

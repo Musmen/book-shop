@@ -16,12 +16,14 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { BookShopComponent } from './components/book-shop/book-shop.component';
+import { AboutComponent } from './components/about/about.component';
 import { BooksService } from './services/books/books.service';
 import { CartService } from './services/cart/cart.service';
 import { LocalStorageService } from './services/local-storage/local-storage.service';
 import { ConfigOptionsService } from './services/config-options/config-options.service';
-import { ConstantsService } from './services/constants/constants.service';
-import { GeneratorFactory } from './services/generator/generator.service';
+import { ConstantsService, APP_DESCRIPTION } from './services/constants/constants.service';
+import { GeneratorService, StringGeneratorService } from './services/generator/generator.service';
+import { GeneratorFactory } from './common/helper';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,10 @@ import { GeneratorFactory } from './services/generator/generator.service';
     CartItemComponent,
     CartListComponent,
     BookListComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     MatTabsModule,
@@ -42,14 +44,16 @@ import { GeneratorFactory } from './services/generator/generator.service';
     MatButtonModule,
     MatIconModule,
     MatBadgeModule,
+    AppRoutingModule,
   ],
   providers: [
     BooksService,
     CartService,
     { provide: LocalStorageService, useClass: LocalStorageService },
     ConfigOptionsService,
-    { provide: ConstantsService, useValue: ConstantsService },
-    { provide: GeneratorFactory, useFactory: GeneratorFactory },
+    GeneratorService,
+    { provide: ConstantsService, useValue: APP_DESCRIPTION },
+    { provide: StringGeneratorService, useFactory: GeneratorFactory, deps: [GeneratorService] },
   ],
   bootstrap: [AppComponent],
 })

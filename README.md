@@ -3,7 +3,7 @@ Task "Book Shop". Course "RSSchool Angular 2021 Q1"
 
 The app will automatically start with eslint check and open in browser if you run `npm start`
 
-### Branch "task-intro" (PR#1):
+### Branch "task-intro" ([link to PR#1](https://github.com/Musmen/book-shop/pull/1)):
   - ##### По заданию ["task-intro"](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular-new/angular-intro.md)
     Создание проекта:
     - [x] с использованием angular-cli создайте новый проект (ng new bookShop) и загрузите его на гитхаб в репозиторий с названием book-shop.
@@ -11,7 +11,7 @@ The app will automatically start with eslint check and open in browser if you ru
   - ##### Дополнительно к заданию:
     - [x] tslint заменен на eslint (Airbnb), установлен и настроен prettier
  
-### Branch "task-components" (PR#2):
+### Branch "task-components" ([link to PR#2](https://github.com/Musmen/book-shop/pull/2)):
   - ##### По заданию ["task-components"](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular-new/angular-components.md)
 
     1. Создать компонент `BookComponent`. Используйте его в `AppComponent`. Модель книг `BookModel` описать интерфейсом:  

@@ -17,7 +17,7 @@ export const mockBooksList: BookItemModel[] = [
     price: 15,
     category: BookItemCategories.comix,
     createDate: 1613910000000,
-    isAvailable: false,
+    isAvailable: true,
   },
   {
     name: 'Gone With the Wind',

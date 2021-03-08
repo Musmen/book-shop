@@ -10,7 +10,7 @@
 </p>
 
 <ul class="cart__list list" *ngIf="cartList">
-  <li class="cart__list__item" *ngFor="let cartItem of cartList">
+  <li class="cart__list__item" *ngFor="let cartItem of cartList; trackBy: trackFunction">
     <app-cart-item [cartItem]="cartItem"></app-cart-item>
   </li>
 </ul>
