@@ -32,7 +32,7 @@ The app will automatically start with eslint check and open in browser if you ru
   - ##### Рекомендации:
     Не используйте для имен событий, которые генерят компоненты, префикс `on`. Используйте его для нейминга обработчиков этих событий
 
-### Branch "task-services" (PR#3):
+### Branch "task-services" ([link to PR#3](https://github.com/Musmen/book-shop/pull/3)):
   - ##### По заданию ["task-services"](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular-new/angular-services-di.md)
     1. Создать сервис `BooksService`, который будет возвращать книги с помощью метода `getBooks()`. Использовать этот сервис в компоненте `BooksListComponent` для доставки массива книг.
     2. Создать сервис `CartService`, который должен содержать данные корзины магазина и управлять ее содержимым. Он будет доставлять список приобритенных книг в виде массива `CartItemComponent` в компонент `CartListComponent`. Кроме этого сервис должен содержать следующую информацию:  
