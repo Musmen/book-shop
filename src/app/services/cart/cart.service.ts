@@ -60,6 +60,11 @@ export class CartService {
     this._updateCartData();
   }
 
+  removeAllBooks(): void {
+    this.cartProduct = [];
+    this._updateCartData();
+  }
+
   private _getCurrentCartItemIndex(name: string): number {
     return this.cartProduct.findIndex((cartItem: CartItemModel) => cartItem.name === name);
   }
