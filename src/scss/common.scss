@@ -22,3 +22,11 @@ hr {
 .link {
   text-decoration: none;
 }
+
+.hovered {
+  background-color: $color-hover;
+}
+
+.card.shadowed {
+  box-shadow: $card-hovered-shadow;
+}
