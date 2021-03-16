@@ -1,0 +1,17 @@
+@import 'src/scss/mixins.scss';
+@import 'src/scss/variables.scss';
+
+.mat-tab-label {
+  text-transform: uppercase;
+
+  opacity: 1;
+}
+
+.mat-tab-label__icon {
+  margin-right: 5px;
+}
+
+.mat-tab-group {
+  min-height: calc(100vh - 97px);
+  background-color: $color-bg-light-main;
+}
